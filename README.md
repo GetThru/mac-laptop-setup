@@ -1,4 +1,4 @@
-# Laptop Setup Script
+# Mac Laptop Setup Script
 
 This script will install everything you need to start developing on a Mac laptop.
 
@@ -7,7 +7,7 @@ This script will install everything you need to start developing on a Mac laptop
 Download the script:
 
 ```
-curl --remote-name https://raw.githubusercontent.com/tracehelms/laptop/master/setup_laptop
+curl --remote-name https://raw.githubusercontent.com/getthru/mac-laptop-setup/master/setup_laptop
 ```
 
 Run the script:
@@ -37,21 +37,8 @@ less ~/laptop.log
 - Erlang
 - Elixir
 - Node.js
-- Ruby
-- Rust
-- Python 3
 
 ### Databases
 
 - Postgres
 - Redis
-
-### Vim Stuff
-
-- Neovim
-- Vundle
-- fzf
-
-## Dotfiles
-
-Optionally, install my [dotfiles](https://github.com/tracehelms/.dotfiles) also.
