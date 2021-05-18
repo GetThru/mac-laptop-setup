@@ -29,7 +29,6 @@ less ~/laptop.log
 ### System-level Tools
 
 - Homebrew
-- AWS CLI
 - [Diff-so-fancy](https://github.com/so-fancy/diff-so-fancy), useful for colorful git diffs
 - [Starship](https://starship.rs) for a great out-of-the-box command line prompt
 - Git, so you have an updated version
@@ -50,12 +49,13 @@ less ~/laptop.log
 
 ### Deploy / Devops Stuff
 
+- AWS CLI
 - Kubernetes CLI
 - Helm for Kubernetes package management
 - AWS Vault for more secure front-end deploys
 
 
-## Why is there a yes/no option to install things?
+## Why is there a yes / no option to install certain things?
 
 If you've installed something before, like Postgres, trying to reinstall it could mess things up. You can also skip sections that were already installed if the script fails part-way through for some reason.
 
