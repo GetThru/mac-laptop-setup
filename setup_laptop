@@ -47,6 +47,10 @@ brew "unixodbc"
 brew "python3"
 brew "yarn"
 brew "starship"
+brew "kubernetes-cli"
+brew "helm"
+brew "tldr"
+brew "minio"
 tap "aws-vault"
 EOF
 
@@ -79,13 +83,13 @@ then
   fancy_echo "Installing Erlang..."
     asdf plugin-add erlang || true
     export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
-    asdf install erlang 21.0
-    asdf global erlang 21.0
+    asdf install erlang 22.3.1
+    asdf global erlang 22.3.1
 
   fancy_echo "Installing Elixir..."
     asdf plugin-add elixir || true
-    asdf install elixir 1.9.1
-    asdf global elixir 1.9.1
+    asdf install elixir 1.11.0-otp-22
+    asdf global elixir 1.11.0-otp-22
 fi
 
 read -p "Install Node.js? (Y/n) " -n 1 -r
@@ -94,8 +98,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   fancy_echo "Installing node.js..."
     asdf plugin-add nodejs || true
+    # Need this old version for the monorepo ember app
     NODEJS_CHECK_SIGNATURES=no asdf install nodejs 10.16.3
-    asdf global nodejs 10.16.3
+    NODEJS_CHECK_SIGNATURES=no asdf install nodejs 14.15.4
+    asdf global nodejs 14.15.4
 
   fancy_echo "Installing global node packages..."
     npm -g i stylelint ember-cli prettier tslint eslint typescript
